@@ -1,15 +1,17 @@
-import { FriendListItem } from '../FriendListItem';
+import { FriendListItem } from 'components/FriendListItem/FriendListItem';
+import { FriendListItemWrap } from './Friendlist.styled';
+import { FriendListWrap } from './Friendlist.styled';
 
 export const FriendList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <FriendListWrap className="friend-list">
       {friends.map(friend => {
         return (
-          <li key={friend.id} className="item">
+          <FriendListItemWrap key={friend.id} className="item">
             <FriendListItem friend={friend} />
-          </li>
+          </FriendListItemWrap>
         );
       })}
-    </ul>
+    </FriendListWrap>
   );
 };
