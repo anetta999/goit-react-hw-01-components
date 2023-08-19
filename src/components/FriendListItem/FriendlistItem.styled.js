@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const getStatusBcgColor = props => {
-  return props.isOnline ? 'green' : 'orange';
+  return props.$isOnline ? 'green' : 'orange';
 };
 export const Status = styled.span`
   width: 20px;
