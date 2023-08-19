@@ -4,6 +4,7 @@ import { StatisticsList } from './Statistics.styled';
 import { StatisticsListItem } from './Statistics.styled';
 import { StatisticsLabel } from './Statistics.styled';
 import { StatisticsPercentage } from './Statistics.styled';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({ title, stats }) => {
   return (
@@ -22,4 +23,9 @@ export const Statistics = ({ title, stats }) => {
       </StatisticsList>
     </StatisticsSection>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
